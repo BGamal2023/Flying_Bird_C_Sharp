@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Flying_Bird_C_
+namespace Flying_Bird
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

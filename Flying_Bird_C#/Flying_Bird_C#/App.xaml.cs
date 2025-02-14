@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace Flying_Bird_C_
+namespace Flying_Bird
 {
     /// <summary>
     /// Interaction logic for App.xaml
