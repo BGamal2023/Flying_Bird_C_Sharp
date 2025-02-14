@@ -19,7 +19,7 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
             Window mWindow,
             MainWindow_Handler obj_MWindow_Handler,
             GameArea_Handler obj_GameArea_Handler,
-            Player_Handler obj_Player_Handler
+            Player_Creating obj_Player_Handler
             );
         //------------------------------------------------------------------------------------------------------------------------------
     }

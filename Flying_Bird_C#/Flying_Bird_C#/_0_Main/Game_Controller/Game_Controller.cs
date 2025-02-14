@@ -17,7 +17,7 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
         private MainWindow_Handler obj_MWindow_Handler = new MainWindow_Handler();
         private GameArea_Handler obj_GameArea_Handler = new GameArea_Handler();
         private OnCreate_Controller obj_OnCreate_Controller = new OnCreate_Controller();
-        private Player_Handler obj_Player_Creating=new Player_Handler();
+        private Player_Creating obj_Player_Creating=new Player_Creating();
         #endregion
         //----------------------------------------------------------------------------------------------------------------------
         public void start_The_Game(

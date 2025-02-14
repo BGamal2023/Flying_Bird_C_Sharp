@@ -10,7 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\Photos\bird.png" />
     <None Remove="Assets\Photos\ground.png" />
     <None Remove="Assets\Photos\pipe.png" />
     <None Remove="Assets\Photos\pipedown.png" />
@@ -22,7 +21,7 @@
 
   <ItemGroup>
     <Resource Include="Assets\Photos\bird.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Photos\ground.png" />
     <Resource Include="Assets\Photos\pipe.png" />

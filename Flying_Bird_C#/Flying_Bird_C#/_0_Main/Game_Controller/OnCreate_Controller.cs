@@ -19,7 +19,7 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
 
         #endregion
         //-------------------------------------------------------------------------------------------------------
-        public void Run(Window mWindow, MainWindow_Handler obj_MWindow_Handler, GameArea_Handler obj_GameArea_Handler, Player_Handler obj_Player_Handler)
+        public void Run(Window mWindow, MainWindow_Handler obj_MWindow_Handler, GameArea_Handler obj_GameArea_Handler, Player_Creating obj_Player_Handler)
         {
             obj_MWindow_Handler.handle_The_MainWindow(mWindow);
             //----
@@ -29,6 +29,7 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
             obj_Player_Handler.get_Image_From_Assets_For_The_Player();
             obj_Player_Handler.add_The_Player_To_The_GameArea();
             //----
+            Globals.current_Game_State=
         }
         //-------------------------------------------------------------------------------------------------------
 

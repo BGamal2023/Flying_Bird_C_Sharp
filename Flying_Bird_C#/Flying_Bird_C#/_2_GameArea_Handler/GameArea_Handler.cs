@@ -67,21 +67,24 @@ namespace Flying_Bird_C_._2_GameArea_Handler
         private void add_Score_Label_On_The_GameArea( )
         {
 
-
-            Application.Current.Dispatcher.Invoke(() =>
+            //----
+            Application.Current.Dispatcher.Invoke((Delegate)(() =>
             {
+                //----
                 Label score_Lable = new Label
                 {
                     Content = "Score :",
                     FontSize = 25,
                     Foreground = System.Windows.Media.Brushes.Black
                 };
-                Canvas.SetLeft(score_Lable, 5);
-                Canvas.SetTop(score_Lable, 10);
-
-               Globals.gameArea.Children.Add(score_Lable);
-            });
-
+                //----
+                Canvas.SetLeft(score_Lable, Globals.score_Lable_Left);
+                Canvas.SetTop(score_Lable, Globals.score_Lable_Top);
+                //----
+                Globals.gameArea.Children.Add(score_Lable);
+                //----
+            }));
+            //----
 
         }
         //--------------------------------------------------------------------------------------------------------------------------
@@ -93,16 +96,18 @@ namespace Flying_Bird_C_._2_GameArea_Handler
                 //----
                 Globals.scoreTextBlock = new TextBlock
                 {
-                    FontSize = 20,
+                    FontSize = Globals.score_TextBlock_FontSize,
                     FontWeight = FontWeights.Bold,
                     Foreground = Brushes.Black,
                     Text = $"{Globals.Score}",
-                    Margin = new Thickness(100, 50, 0, 0)
+                    Margin = new Thickness(
+                        Globals.score_TextBlock_Left,
+                        Globals.score_TextBlock_Top,
+                        0,
+                        0)
                 };
                 //----
                 Globals.gameArea.Children.Add(Globals.scoreTextBlock);
-                //----
-                Canvas.SetLeft(Globals.scoreTextBlock, 5);
                 //----
             });
             //----
