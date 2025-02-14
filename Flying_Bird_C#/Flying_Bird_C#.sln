@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flying_Bird_C_", "Flying_Bird_C#\Flying_Bird_C_.csproj", "{340987ED-626A-4C9D-A913-2C37D44ACE46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flying_Bird", "Flying_Bird_C#\Flying_Bird.csproj", "{340987ED-626A-4C9D-A913-2C37D44ACE46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

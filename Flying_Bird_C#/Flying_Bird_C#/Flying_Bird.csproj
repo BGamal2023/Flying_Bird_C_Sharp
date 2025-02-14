@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Flying_Bird_C_</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Photos\bird.png" />
+    <None Remove="Assets\Photos\ground.png" />
+    <None Remove="Assets\Photos\pipe.png" />
+    <None Remove="Assets\Photos\pipedown.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Only_For_Renaming_Folders\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Photos\bird.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Photos\ground.png" />
+    <Resource Include="Assets\Photos\pipe.png" />
+    <Resource Include="Assets\Photos\pipedown.png" />
+  </ItemGroup>
+
+</Project>
