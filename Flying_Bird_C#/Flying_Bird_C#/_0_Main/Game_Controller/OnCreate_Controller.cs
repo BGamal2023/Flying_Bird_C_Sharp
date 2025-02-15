@@ -19,17 +19,33 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
 
         #endregion
         //-------------------------------------------------------------------------------------------------------
-        public void Run(Window mWindow, MainWindow_Handler obj_MWindow_Handler, GameArea_Handler obj_GameArea_Handler, Player_Creating obj_Player_Handler)
+        public void Run(
+            Window mWindow,
+            MainWindow_Handler obj_MWindow_Handler,
+            GameArea_Handler obj_GameArea_Handler,
+            Player_Creating obj_Player_Creating,
+            onRun_Controller obj_OnRun_Controller,
+            onRestart_Controller obj_onRestart_Controller,
+            onPause_Controller obj_OnPause_Contorller)
         {
             obj_MWindow_Handler.handle_The_MainWindow(mWindow);
             //----
             obj_GameArea_Handler.handle_The_GameArea(mWindow);
             //----
-            obj_Player_Handler.set_Player_Dimension();
-            obj_Player_Handler.get_Image_From_Assets_For_The_Player();
-            obj_Player_Handler.add_The_Player_To_The_GameArea();
+            obj_Player_Creating.set_Player_Dimension();
+            obj_Player_Creating.get_Image_From_Assets_For_The_Player();
+            obj_Player_Creating.add_The_Player_To_The_GameArea();
             //----
-            Globals.current_Game_State=
+            Globals.current_Game_State = obj_OnRun_Controller;
+            Globals.current_Game_State.Run(
+                mWindow,
+             obj_MWindow_Handler,
+             obj_GameArea_Handler,
+            obj_Player_Creating,
+            obj_OnRun_Controller,
+            obj_onRestart_Controller,
+             obj_OnPause_Contorller);
+            //----
         }
         //-------------------------------------------------------------------------------------------------------
 

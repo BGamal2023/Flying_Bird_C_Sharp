@@ -12,7 +12,7 @@ using System.Windows;
 
 namespace Flying_Bird_C_._3_Player
 {
-    internal class Player_Handler
+    internal class Player_Creating
     {
         #region Fields
 

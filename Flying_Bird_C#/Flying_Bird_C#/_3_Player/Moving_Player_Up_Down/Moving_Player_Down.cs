@@ -7,31 +7,32 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Flying_Bird_C_._3_Player
+namespace Flying_Bird_C_._3_Player.Moving_Player_Up_Down
 {
-    internal class Player_Moving
+    internal class Moving_Player_Down : I_Moving_Player_Up_Down_Runnable
     {
         #region Fields
         #endregion
         //-----------------------------------------------------------------------------------------------------------------------------
-        public void move_The_Player()
+        public void Run()
         {
-            Thread player_Moving_Thread = new Thread(() =>
-            {
-                moving_player_Down();
-            });
-            player_Moving_Thread.Start();
-            Globals.moving_Player_Thread = player_Moving_Thread;
+            moving_player_Down();
         }
         //-----------------------------------------------------------------------------------------------------------------------------
         private void moving_player_Down()
         {
             Application.Current.Dispatcher.Invoke(() =>
             {
+                //----
+                Globals.gameArea.Children.Remove(Globals.img_Player);
+                //----
                 double top = Canvas.GetTop(Globals.img_Player);
+                //----
+                Globals.gameArea.Children.Add(Globals.img_Player);
                 Canvas.SetTop(Globals.img_Player, top + Globals.player_Moving_Step);
+                //----
             });
-          
+
         }
     }
 }

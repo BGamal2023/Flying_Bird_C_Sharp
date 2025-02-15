@@ -33,11 +33,8 @@ namespace Flying_Bird_C_.__Globals
         public static I_Game_Controller_Runnable current_Game_State = new C_Game_Controller();
 
         ///Threads
-       public static Thread moving_Player_Thread = new Thread(() =>
-        {
-
-        });
-        
+     
+        public static int minimum_Time_For_One_Loop_Of_The_Game = 20;
 
     }
 }
