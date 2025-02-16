@@ -21,6 +21,7 @@ namespace Flying_Bird_C_._3_Player.Moving_Player_Up_Down
         //-----------------------------------------------------------------------------------------------------------------------------
         private void moving_player_Down()
         {
+            //----
             Application.Current.Dispatcher.Invoke(() =>
             {
                 //----
@@ -32,7 +33,8 @@ namespace Flying_Bird_C_._3_Player.Moving_Player_Up_Down
                 Canvas.SetTop(Globals.img_Player, top + Globals.player_Moving_Step);
                 //----
             });
-
+            //----
         }
+        //-----------------------------------------------------------------------------------------------------------------------------
     }
 }

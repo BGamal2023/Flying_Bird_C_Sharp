@@ -3,6 +3,7 @@ using Flying_Bird_C_._1_MainWindow_Handler;
 using Flying_Bird_C_._2_GameArea_Handler;
 using Flying_Bird_C_._3_Player;
 using Flying_Bird_C_._3_Player.Moving_Player_Up_Down;
+using Flying_Bird_C_._4_Land.Land_Moving;
 using Flying_Bird_C_._A_10_General;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,11 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
 {
     internal class onRun_Controller : I_Game_Controller_Runnable
     {
-        private Moving_Player_Controller obj_Moving_Player_Controller=new Moving_Player_Controller();
+        ///bug # 0 remove local variables and deliver it to run of the runnable
+        #region Fields
+        private Moving_Player_Controller obj_Moving_Player_Controller = new Moving_Player_Controller();
+        private Land_Moving_Controller obj_Land_Moving_Controller = new Land_Moving_Controller();
+        #endregion
         //-----------------------------------------------------------------------------------------------------------------------------------------------------
         public void Run(
             Window mWindow,
@@ -33,10 +38,9 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
                     DateTime start = DateTime.Now;
 
                     // moving the player
-                    //    obj_Player_Moving.hadle_The_Moving_Of_The_Player();
                     obj_Moving_Player_Controller.handle_Moving_The_Player();
                     //----
-                    // moving the land
+                    obj_Land_Moving_Controller.moving_The_Ground();
                     //----
                     //moving the pipes
                     //----
@@ -46,19 +50,20 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
 
                     /// bug #0 here join all running threads.............
                     Globals_Player.player_Moving_Thread.Join();
+                   // Globals_Land.ground_Moving_Thread.Join();
 
                     DateTime end = DateTime.Now;
                     TimeSpan diff = end - start;
                     Log.log(")))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))");
-                    Log.log("The Total Time = "+diff.TotalMilliseconds);
+                    Log.log("The Total Time = " + diff.TotalMilliseconds);
 
 
-                    if(diff.TotalMilliseconds < Globals.minimum_Time_For_One_Loop_Of_The_Game  ) 
+                    if (diff.TotalMilliseconds < Globals.minimum_Time_For_One_Loop_Of_The_Game)
                     {
                         Thread.Sleep((int)(Globals.minimum_Time_For_One_Loop_Of_The_Game - diff.TotalMilliseconds));
-                    
+
                     }
-                    DateTime end_2= DateTime.Now;
+                    DateTime end_2 = DateTime.Now;
 
                     TimeSpan diff_2 = end_2 - start;
                     Log.log(" total time after sleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeep= " + diff_2.TotalMilliseconds);

@@ -3,6 +3,7 @@ using Flying_Bird_C_.__Globals;
 using Flying_Bird_C_._1_MainWindow_Handler;
 using Flying_Bird_C_._2_GameArea_Handler;
 using Flying_Bird_C_._3_Player;
+using Flying_Bird_C_._4_Land;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +16,9 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
 {
     internal class OnCreate_Controller : I_Game_Controller_Runnable
     {
+        ///bug #0 ...remove locals field and add it to run of the interface....
         #region Fields
-
+        private Land_Creating obj_Land_Creating=new Land_Creating();
         #endregion
         //-------------------------------------------------------------------------------------------------------
         public void Run(
@@ -36,6 +38,10 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
             obj_Player_Creating.get_Image_From_Assets_For_The_Player();
             obj_Player_Creating.add_The_Player_To_The_GameArea();
             //----
+            obj_Land_Creating.set_Land_Dimension();
+            obj_Land_Creating.get_Image_From_Assets_For_The_Ground();
+            obj_Land_Creating.add_The_Ground_To_The_GameArea();
+            //-----
             Globals.current_Game_State = obj_OnRun_Controller;
             Globals.current_Game_State.Run(
                 mWindow,
