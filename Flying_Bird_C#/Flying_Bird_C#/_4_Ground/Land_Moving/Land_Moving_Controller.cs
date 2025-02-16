@@ -51,7 +51,6 @@ namespace Flying_Bird_C_._4_Ground.Land_Moving
             Globals_Land.ground_Moving_Thread = ground_Moving_Thread;
 
         }
-
         //--------------------------------------------------------------------------------------------------------------------------------------------
         private void moving_One_Piece_Of_Ground(Image ground_Image)
         {

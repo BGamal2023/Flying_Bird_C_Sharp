@@ -26,7 +26,6 @@
 
   <ItemGroup>
     <Folder Include="Only_For_Renaming_Folders\" />
-    <Folder Include="_5_Pipes\Moving\" />
   </ItemGroup>
 
 </Project>

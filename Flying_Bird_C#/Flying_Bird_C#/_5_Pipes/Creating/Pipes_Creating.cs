@@ -13,8 +13,7 @@ namespace Flying_Bird_C_._5_Pipes.Creating
     internal class Pipes_Creating
     {
         #region Fields
-        private string img_UP_Pipes_Path = "./Assets/Photos/pipe.png";
-        private string img_Down_Pipes_Path = "./Assets/Photos/pipedown.png";
+      
         #endregion
         //--------------------------------------------------------------------------------------------------------------------------
         public void handle_Creating_And_Adding_The_Pipes_To_GameArea()
@@ -26,9 +25,9 @@ namespace Flying_Bird_C_._5_Pipes.Creating
         private void create_List_Of_Pipes()
         {
             //----
-            BitmapImage bitmap_Up_Pipe_Imgae = get_Up_Image();
+            BitmapImage bitmap_Up_Pipe_Imgae = get_The_Down_Image();
             //----
-            BitmapImage bitmap_Down_Pipe_Imgae = get_Down_Image();
+            BitmapImage bitmap_Down_Pipe_Imgae = get_The_UP_Image();
             //----
             for (int i = 0; i < Globals_Pipes.num_Of_Pipes; i++)
             {
@@ -88,7 +87,7 @@ namespace Flying_Bird_C_._5_Pipes.Creating
                 //----
                 if (i % 2 == 0)
                 {
-                    // up pipe
+                    // down pipe
                     //----
                     Application.Current.Dispatcher.Invoke(() =>
                     {
@@ -106,7 +105,7 @@ namespace Flying_Bird_C_._5_Pipes.Creating
                 //----
                 else
                 {
-                    //down pipes
+                    // down pipes
                     //----
                     Application.Current.Dispatcher.Invoke(() =>
                     {
@@ -115,8 +114,8 @@ namespace Flying_Bird_C_._5_Pipes.Creating
                         //----
                         Canvas.SetLeft(Globals_Pipes.li_Of_Pipes[i],
                             Globals_Pipes.starting_Left);
-                        Canvas.SetTop(Globals_Pipes.li_Of_Pipes[i],
-                            Globals.gameArea.Height - Globals_Pipes.height_Of_Pipe);
+                    Canvas.SetTop(Globals_Pipes.li_Of_Pipes[i], Globals_Pipes.down_Pipes_Top
+                          );
                         //----
                     });
                    //----
@@ -128,21 +127,24 @@ namespace Flying_Bird_C_._5_Pipes.Creating
             //----
         }
         //--------------------------------------------------------------------------------------------------------------------------
-        private BitmapImage get_Up_Image()
+        private BitmapImage get_The_Down_Image()
         {
+            string str_Image_Path = "pack://application:,,,/Assets/Photos/pipedown.png";
+
             BitmapImage bitmap_Up_Pipe_Imgae = new BitmapImage();
             bitmap_Up_Pipe_Imgae.BeginInit();
-            bitmap_Up_Pipe_Imgae.UriSource = new Uri(img_UP_Pipes_Path, UriKind.Relative);
+            bitmap_Up_Pipe_Imgae.UriSource = new Uri(str_Image_Path, UriKind.Absolute);
             bitmap_Up_Pipe_Imgae.EndInit();
 
             return bitmap_Up_Pipe_Imgae;
         }
         //--------------------------------------------------------------------------------------------------------------------------
-        private BitmapImage get_Down_Image()
+        private BitmapImage get_The_UP_Image()
         {
+            string str_Image_Path = "pack://application:,,,/Assets/Photos/pipe.png";
             BitmapImage bitmap_Down_Pipe_Imgae = new BitmapImage();
             bitmap_Down_Pipe_Imgae.BeginInit();
-            bitmap_Down_Pipe_Imgae.UriSource = new Uri(img_Down_Pipes_Path, UriKind.Relative);
+            bitmap_Down_Pipe_Imgae.UriSource = new Uri(str_Image_Path, UriKind.Absolute);
             bitmap_Down_Pipe_Imgae.EndInit();
 
             return bitmap_Down_Pipe_Imgae;
