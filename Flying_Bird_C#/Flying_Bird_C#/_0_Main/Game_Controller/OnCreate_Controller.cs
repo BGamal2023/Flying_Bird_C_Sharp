@@ -3,7 +3,7 @@ using Flying_Bird_C_.__Globals;
 using Flying_Bird_C_._1_MainWindow_Handler;
 using Flying_Bird_C_._2_GameArea_Handler;
 using Flying_Bird_C_._3_Player;
-using Flying_Bird_C_._4_Land;
+using Flying_Bird_C_._4_Ground;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -16,16 +16,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Only_For_Renaming_Folders\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Assets\Photos\bird.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Photos\ground.png" />
     <Resource Include="Assets\Photos\pipe.png" />
     <Resource Include="Assets\Photos\pipedown.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Only_For_Renaming_Folders\" />
   </ItemGroup>
 
 </Project>

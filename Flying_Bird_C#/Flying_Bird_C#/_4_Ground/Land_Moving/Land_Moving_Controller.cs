@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Flying_Bird_C_._4_Land.Land_Moving
+namespace Flying_Bird_C_._4_Ground.Land_Moving
 {
     internal class Land_Moving_Controller
     {
@@ -27,14 +27,14 @@ namespace Flying_Bird_C_._4_Land.Land_Moving
                     Globals_Land.left_Ground_1 = Canvas.GetLeft(Globals_Land.img_Land_1);
                     Globals_Land.left_Ground_2 = Canvas.GetLeft(Globals_Land.img_Land_2);
 
-                     if (Globals_Land.left_Ground_1 <= -Globals.gameArea_W)
-                     {
-                         Globals_Land.left_Ground_1 = Globals.gameArea_W;
-                     }
-                     if (Globals_Land.left_Ground_2 <= -Globals.gameArea_W)
-                     {
-                         Globals_Land.left_Ground_2 = Globals.gameArea_W;
-                     }
+                    if (Globals_Land.left_Ground_1 <= -Globals.gameArea_W)
+                    {
+                        Globals_Land.left_Ground_1 = Globals.gameArea_W;
+                    }
+                    if (Globals_Land.left_Ground_2 <= -Globals.gameArea_W)
+                    {
+                        Globals_Land.left_Ground_2 = Globals.gameArea_W;
+                    }
 
                     //----
                     Globals.gameArea.Children.Add(Globals_Land.img_Land_1);
