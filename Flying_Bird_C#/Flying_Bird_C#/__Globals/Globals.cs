@@ -30,14 +30,14 @@ namespace Flying_Bird_C_.__Globals
         public static Image img_Player=new Image();
         public static int player_W = 50;
         public static int player_H = 50;
-        public static int player_Moving_Step = 5;
+        public static int player_Moving_Step = 10;
 
         /// Game Controller
         public static I_Game_Controller_Runnable current_Game_State = new C_Game_Controller();
 
         ///Threads
-     
-        public static int minimum_Time_For_One_Loop_Of_The_Game = 20;
+
+        public static int minimum_Time_For_One_Loop_Of_The_Game = 50;
 
     }
 }

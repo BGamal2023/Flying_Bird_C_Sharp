@@ -27,11 +27,23 @@ namespace Flying_Bird_C_.__Globals
 
         public static double starting_Left = Globals.gameArea.Width - 200;
 
-        public static Thread moving_Pipes_Thread = new Thread(() =>
+        public static Thread moving_Pipes_Thread_1 = new Thread(() =>
         {
 
         });
+        public static Thread moving_Pipes_Thread_2 = new Thread(() =>
+        {
 
-        public static int pipes_Moving_Step = 5;
+        });
+        public static Thread moving_Pipes_Thread_3 = new Thread(() =>
+        {
+
+        });
+        public static Thread moving_Pipes_Thread_4 = new Thread(() =>
+        {
+
+        });
+     
+        public static int pipes_Moving_Step = 10;
     }
 }

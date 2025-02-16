@@ -29,7 +29,7 @@ namespace Flying_Bird_C_.__Globals
 
         public static double ground_Top = Globals.gameArea_H - ground_Hight;
 
-        public static int land_Moving_Step = 5;
+        public static int land_Moving_Step = 10;
         public static Thread ground_Moving_Thread = new Thread(() =>
         {
         

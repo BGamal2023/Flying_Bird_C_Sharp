@@ -30,7 +30,7 @@ namespace Flying_Bird_C_._3_Player
             
             try
             {
-                /// bug # i am here  ....i will copy way of getting image here to pipes code 
+            
                 string str_Player_Image_Path = "pack://application:,,,/Assets/Photos/bird.png"; 
                 BitmapImage bitmap = new BitmapImage(new Uri(str_Player_Image_Path, UriKind.Absolute));
                 Globals.img_Player.Source = bitmap;

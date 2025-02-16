@@ -44,7 +44,7 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
                     //----
                     obj_Land_Moving_Controller.moving_The_Ground();
                     //----
-                    obj_Pipes_Moving_Handler.move_The_Pipes();
+                    obj_Pipes_Moving_Handler.move_The_Pipes_V2();
                     //----
 
 
@@ -53,10 +53,14 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
                     /// bug #0 here join all running threads.............
                     Globals_Player.player_Moving_Thread.Join();
                     Globals_Land.ground_Moving_Thread.Join();
-                    Globals_Pipes.moving_Pipes_Thread.Join();
-                  //----
+                /*    Globals_Pipes.moving_Pipes_Thread_1.Join();
+                    Globals_Pipes.moving_Pipes_Thread_2.Join();
+                    Globals_Pipes.moving_Pipes_Thread_3.Join();
+                    Globals_Pipes.moving_Pipes_Thread_4.Join();*/
 
-                  DateTime end = DateTime.Now;
+                    //----
+
+                    DateTime end = DateTime.Now;
                     TimeSpan diff = end - start;
                     Log.log(")))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))");
                     Log.log("The Total Time = " + diff.TotalMilliseconds);

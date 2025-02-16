@@ -11,7 +11,7 @@ namespace Flying_Bird_C_._A_10_General
     {
         public static void log(string message)
         {
-            Debug.WriteLine(message);
+           // Debug.WriteLine(message);
         }
     }
 }
