@@ -9,6 +9,9 @@ namespace Flying_Bird_C_.__Globals
         public static int mWindow_H =800;
         public static int mWindow_W = 600;
 
+        public static int gameArea_H=mWindow_H;
+        public static int gameArea_W=mWindow_W;
+
         public static Canvas gameArea = new Canvas();
         ///Score
         public static int Score = 0;

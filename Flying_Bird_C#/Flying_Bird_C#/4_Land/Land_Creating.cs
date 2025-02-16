@@ -36,6 +36,7 @@ namespace Flying_Bird_C_._4_Land
             BitmapImage bitmap = new BitmapImage(new Uri(str_Land_Image_Path, UriKind.Absolute));
             Globals_Land.img_Land_1.Source = bitmap;
             Globals_Land.img_Land_2.Source = bitmap;
+            Globals_Land.img_Land_3.Source = bitmap;
 
 
         }
@@ -45,21 +46,28 @@ namespace Flying_Bird_C_._4_Land
             //----
             Globals.gameArea.Children.Add(Globals_Land.img_Land_1);
             Globals.gameArea.Children.Add(Globals_Land.img_Land_2);
+         
+
             //----
-            double left_Ground_1 = 0;
+            
             double top_Ground_1= Globals.gameArea.Height - Globals_Land.img_Land_1.Height;
 
-            double left_Ground_2 = Globals.mWindow_H;
+          
             double top_Ground_2 = Globals.gameArea.Height - Globals_Land.img_Land_2.Height;
 
+           
+          
+
             //----
-            Canvas.SetLeft(Globals_Land.img_Land_1, left_Ground_1);
+            Canvas.SetLeft(Globals_Land.img_Land_1, Globals_Land.left_Ground_1);
             Canvas.SetTop(Globals_Land.img_Land_1, top_Ground_1);
 
-            Canvas.SetLeft(Globals_Land.img_Land_2, left_Ground_2);
+            Canvas.SetLeft(Globals_Land.img_Land_2, Globals_Land.left_Ground_2);
             Canvas.SetTop(Globals_Land.img_Land_2, top_Ground_2);
+
+          
             Log.log("*************************************************************");
-            Log.log("the center x = " + left_Ground_1);
+            //Log.log("the center x = " + left_Ground_1);
             Log.log("the center y= " + top_Ground_1);
             Log.log("*************************************************************");
             //----
