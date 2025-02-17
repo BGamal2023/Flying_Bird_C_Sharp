@@ -45,5 +45,6 @@ namespace Flying_Bird_C_.__Globals
         });
      
         public static int pipes_Moving_Step = 10;
+        public static bool does_Player_Pass_Pipe = false;
     }
 }

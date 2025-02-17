@@ -26,6 +26,8 @@ namespace Flying_Bird_C_.__Globals
         public static int score_TextBlock_Left = 90;
         public static int score_TextBlock_Top = 20;
 
+        public static int zIndex_Score_Lable = 5;
+        public static int zIndex_Score_TextBlock = 5;
 
         ///Player
         public static Image img_Player=new Image();

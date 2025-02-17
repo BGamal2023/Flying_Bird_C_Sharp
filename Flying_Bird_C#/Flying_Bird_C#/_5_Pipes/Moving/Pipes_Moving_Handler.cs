@@ -1,4 +1,5 @@
 ﻿using Flying_Bird_C_.__Globals;
+using Flying_Bird_C_._7_Score;
 using Flying_Bird_C_._A_10_General;
 using System;
 using System.Collections.Generic;
@@ -22,12 +23,12 @@ namespace Flying_Bird_C_._5_Pipes.Moving
 
 
             ///bug #0 i am here 
-            
+
 
             //----
             foreach (var i_Pipe in Globals_Pipes.li_Of_Pipes.ToList())
             {
-             
+
                 Thread thread = new Thread(() =>
                 {
                     Application.Current.Dispatcher.Invoke(() =>
@@ -91,38 +92,44 @@ namespace Flying_Bird_C_._5_Pipes.Moving
             //----
             Thread thread = new Thread(() =>
             {
-            foreach (var i_Pipe in Globals_Pipes.li_Of_Pipes.ToList())
-            {
+                //----
+                foreach (var i_Pipe in Globals_Pipes.li_Of_Pipes.ToList())
+                {
+                    //----
                     Application.Current.Dispatcher.Invoke(() =>
                     {
+                        //----
                         Globals.gameArea.Children.Remove(i_Pipe);
-
+                        //----
                         double left = Canvas.GetLeft(i_Pipe);
+                        //----
                         if (left < -Globals_Pipes.width_Of_Pipe)
                         {
+                            //--
                             Image last_Pipe = Globals_Pipes.li_Of_Pipes.Last();
+                            //--
                             double left_Of_Last_Pipe = Canvas.GetLeft(last_Pipe);
+                            //--
                             left = left_Of_Last_Pipe + Globals_Pipes.width_Bet_Pipes;
-
+                            //--
                             Globals_Pipes.li_Of_Pipes.Remove(i_Pipe);
                             Globals_Pipes.li_Of_Pipes.Add(i_Pipe);
+                            //--
+                            Score_Handler.IncreaseScore();
+                            //--
                         }
-
+                        //----
                         Globals.gameArea.Children.Add(i_Pipe);
                         Canvas.SetLeft(i_Pipe, left - Globals_Pipes.pipes_Moving_Step);
+                        //----
                     });
-             
-
-
-            }
-
+                    //----
+                }
+                //----
             });
             //----
-
             thread.Start();
-
-
-
+            //----
         }
     }
 }

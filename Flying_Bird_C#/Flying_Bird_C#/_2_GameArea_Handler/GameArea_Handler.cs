@@ -80,6 +80,7 @@ namespace Flying_Bird_C_._2_GameArea_Handler
                 //----
                 Canvas.SetLeft(score_Lable, Globals.score_Lable_Left);
                 Canvas.SetTop(score_Lable, Globals.score_Lable_Top);
+                Canvas.SetZIndex(score_Lable,Globals.zIndex_Score_Lable);
                 //----
                 Globals.gameArea.Children.Add(score_Lable);
                 //----
@@ -108,19 +109,12 @@ namespace Flying_Bird_C_._2_GameArea_Handler
                 };
                 //----
                 Globals.gameArea.Children.Add(Globals.scoreTextBlock);
+                Canvas.SetZIndex(Globals.scoreTextBlock,Globals.zIndex_Score_TextBlock);
                 //----
             });
             //----
         }
-        //--------------------------------------------------------------------------------------------------------------------------
-        public void IncreaseScore()
-        {
-            //----
-            Globals.Score++;
-            //----
-            Globals.scoreTextBlock.Text = $"{Globals.Score}";
-            //----
-        }
+       
         //--------------------------------------------------------------------------------------------------------------------------
 
 
