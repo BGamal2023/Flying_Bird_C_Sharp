@@ -5,6 +5,7 @@ namespace Flying_Bird_C_.__Globals
 {
     internal class Globals
     {
+        ///bug#0 move every static variable to its position
         /// MainWindow And GameArea
         public static int mWindow_H =800;
         public static int mWindow_W = 600;
@@ -37,7 +38,7 @@ namespace Flying_Bird_C_.__Globals
 
         ///Threads
 
-        public static int minimum_Time_For_One_Loop_Of_The_Game = 50;
+        public static int minimum_Time_For_One_Loop_Of_The_Game = 40;
 
     }
 }
