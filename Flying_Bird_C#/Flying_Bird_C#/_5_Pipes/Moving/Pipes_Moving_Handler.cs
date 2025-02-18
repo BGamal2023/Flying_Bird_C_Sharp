@@ -17,8 +17,14 @@ namespace Flying_Bird_C_._5_Pipes.Moving
         #region Fields
         private int count = 0;
         #endregion
+        //--------------------------------------------------------------------------------------------------------------------------------------
+        public void handl_The_Moving_Of_The_Pipes()
+        {
+           // move_The_Pipes_V1();
+            move_The_Pipes_V2();
+        }
         //---------------------------------------------------------------------------------------------------------------------------------------
-        public void move_The_Pipes_V1()
+        private void move_The_Pipes_V1()
         {
 
 
@@ -87,7 +93,7 @@ namespace Flying_Bird_C_._5_Pipes.Moving
 
         }
         //---------------------------------------------------------------------------------------------------------------------------------------
-        public void move_The_Pipes_V2()
+        private void move_The_Pipes_V2()
         {
             //----
             Thread thread = new Thread(() =>
@@ -131,5 +137,7 @@ namespace Flying_Bird_C_._5_Pipes.Moving
             thread.Start();
             //----
         }
+        //---------------------------------------------------------------------------------------------------------------------------------------
+
     }
 }

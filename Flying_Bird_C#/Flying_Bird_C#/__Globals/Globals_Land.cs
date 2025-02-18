@@ -10,6 +10,8 @@ namespace Flying_Bird_C_.__Globals
 {
     internal class Globals_Land
     {
+        public static List<Image> li_Of_Ground_Images= new List<Image>();
+
         public static Image img_Land_1 = new Image();
         public static int land_W_1 = Globals.gameArea_W;
         public static int land_H_1 = 200;

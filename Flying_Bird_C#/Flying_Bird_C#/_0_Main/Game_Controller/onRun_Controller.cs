@@ -35,19 +35,21 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
             onRestart_Controller obj_onRestart_Controller,
             onPause_Controller obj_OnPause_Contorller)
         {
+            //----
             Thread running_Thread = new Thread(() =>
             {
+                //----
                 while (true)
                 {
+                    //----
                     DateTime start = DateTime.Now;
-
                     // moving the player
                     obj_Moving_Player_Controller.handle_Moving_The_Player();
                     //----
                     obj_Land_Moving_Controller.moving_The_Ground();
                     //----
-                    obj_Pipes_Moving_Handler.move_The_Pipes_V2();
-                    //----
+                    obj_Pipes_Moving_Handler.handl_The_Moving_Of_The_Pipes();
+                    //---
                     // collison handling
                     obj_Collision_Handler.handle_The_Collision();
                     //----
@@ -79,14 +81,11 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
                     TimeSpan diff_2 = end_2 - start;
                     Log.log(" total time after sleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeep= " + diff_2.TotalMilliseconds);
                 }
-
+                //----
             });
+            //----
             running_Thread.Start();
-
-
-
-
-
+            //----
         }
         //-----------------------------------------------------------------------------------------------------------------------------------------------------
     }

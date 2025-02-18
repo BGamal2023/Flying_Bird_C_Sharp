@@ -13,7 +13,7 @@ namespace Flying_Bird_C_.__Globals
 
         public static List<Image> li_Of_Pipes = new List<Image>();
         public static int num_Of_Pipes = 4;
-        public static int width_Of_Pipe = 200;
+        public static int width_Of_Pipe = 100;
         public static int height_Of_Pipe = 300;
         /// bug # 0 return the canceld line again 
         public static int width_Bet_Pipes = 300;

@@ -12,26 +12,20 @@ namespace Flying_Bird_C_._6_Collision
 {
     internal class Collision_Handler
     {
+        #region The Fields
+        #endregion
         //---------------------------------------------------------------------------------------------------------------
         public void handle_The_Collision()
         {
-            /// bug #6 complet this code
-            //get x and y of the plyer
-            // get x and y of the land and pipes
             //----
             bool ground_Collision =
                 does_Ground_Collison_Happend();
             bool pipe_Collision =
                 does_Pipe_Collision_Happend();
             //----
-            if (ground_Collision)
+            if (ground_Collision || pipe_Collision)
             {
-                Log.log1("Ground Collision");
-
-            }
-            if(pipe_Collision)
-            {
-                Log.log1("Pipe collision");
+                Globals_Collision.does_Collision_Happend = true;
             }
             //----
 
@@ -60,24 +54,25 @@ namespace Flying_Bird_C_._6_Collision
         //---------------------------------------------------------------------------------------------------------------
         private bool does_Pipe_Collision_Happend()
         {
+            //----
             if (Globals.img_Player == null)
             {
                 return false;
             }
+            //----
             ///bug #6 ...i added .ToList().....
+            //----
             foreach (Image i_Pipe in Globals_Pipes.li_Of_Pipes.ToList())
             {
-
                 bool collision = does_Collision_Happend(Globals.img_Player, i_Pipe);
                 if (collision)
                 {
                     return true;
                 }
             }
-
-
-
+            //----
             return false;
+            //----
         }
         //----------------------------------------------------------------------------------------------------------------
         private bool does_Collision_Happend(Image image1, Image image2)
@@ -103,5 +98,6 @@ namespace Flying_Bird_C_._6_Collision
             return rect1.IntersectsWith(rect2);
             //----
         }
+        //---------------------------------------------------------------------------------------------------------------
     }
 }

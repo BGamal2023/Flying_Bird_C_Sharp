@@ -26,6 +26,7 @@ namespace Flying_Bird_C_._4_Ground
             Globals_Land.img_Land_2.Width = Globals_Land.land_W_2;
             Globals_Land.img_Land_2.Height = Globals_Land.land_H_2;
 
+        
         }
         //-------------------------------------------------------------------------------------------------------------
         public void get_Image_From_Assets_For_The_Ground()
