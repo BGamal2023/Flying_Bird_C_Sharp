@@ -76,7 +76,8 @@ namespace Flying_Bird_C_._8_Pop_Up_Menus
                 Margin = new Thickness(5),
                 Padding = new Thickness(10),
                 ClickMode = ClickMode.Release,
-                Click += clickHandler
+                /// bug #8 it give me 2 alarms pls check why and continue
+          //     Click += clickHandler
             };
         }
         //--------------------------------------------------------------------------------------------------

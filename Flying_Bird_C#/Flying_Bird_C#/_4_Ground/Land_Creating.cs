@@ -45,35 +45,14 @@ namespace Flying_Bird_C_._4_Ground
         //-------------------------------------------------------------------------------------------------------------
         public void add_The_Ground_To_The_GameArea()
         {
-            foreach(Image i_Land in Globals_Land.li_Of_Ground_Images)
-            {
-                Globals.gameArea.Children.Add(i_Land);
-
-                double top_Ground= Globals.gameArea.Height - i_Land.Height;
-
-
-            }
             //----
-
-
-
-          
-
-
-
-
+            Globals.gameArea.Children.Add(Globals_Land.img_Land_1);
+            Globals.gameArea.Children.Add(Globals_Land.img_Land_2);
             //----
             Canvas.SetLeft(Globals_Land.img_Land_1, Globals_Land.left_Ground_1);
-            Canvas.SetTop(Globals_Land.img_Land_1, top_Ground_1);
-
+            Canvas.SetTop(Globals_Land.img_Land_1, Globals_Land.ground_Top);
             Canvas.SetLeft(Globals_Land.img_Land_2, Globals_Land.left_Ground_2);
-            Canvas.SetTop(Globals_Land.img_Land_2, top_Ground_2);
-
-
-            Log.log("*************************************************************");
-            //Log.log("the center x = " + left_Ground_1);
-            Log.log("the center y= " + top_Ground_1);
-            Log.log("*************************************************************");
+            Canvas.SetTop(Globals_Land.img_Land_2, Globals_Land.ground_Top);
             //----
         }
     }
