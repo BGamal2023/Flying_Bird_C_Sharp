@@ -20,41 +20,44 @@ namespace Flying_Bird_C_._4_Ground
         //-------------------------------------------------------------------------------------------------------------
         public void set_Land_Dimension()
         {
+            //----
             Globals_Land.img_Land_1.Width = Globals_Land.land_W_1;
             Globals_Land.img_Land_1.Height = Globals_Land.land_H_1;
-
+            //----
             Globals_Land.img_Land_2.Width = Globals_Land.land_W_2;
             Globals_Land.img_Land_2.Height = Globals_Land.land_H_2;
+            //----
 
-        
         }
         //-------------------------------------------------------------------------------------------------------------
         public void get_Image_From_Assets_For_The_Ground()
         {
-
-
+            //----
             string str_Land_Image_Path = "pack://application:,,,/Assets/Photos/ground.png";
             BitmapImage bitmap = new BitmapImage(new Uri(str_Land_Image_Path, UriKind.Absolute));
             Globals_Land.img_Land_1.Source = bitmap;
             Globals_Land.img_Land_2.Source = bitmap;
-            Globals_Land.img_Land_3.Source = bitmap;
-
-
+            //----
+            Globals_Land.li_Of_Ground_Images.Add(Globals_Land.img_Land_1);
+            Globals_Land.li_Of_Ground_Images.Add(Globals_Land.img_Land_2);
+            //----
         }
         //-------------------------------------------------------------------------------------------------------------
         public void add_The_Ground_To_The_GameArea()
         {
+            foreach(Image i_Land in Globals_Land.li_Of_Ground_Images)
+            {
+                Globals.gameArea.Children.Add(i_Land);
+
+                double top_Ground= Globals.gameArea.Height - i_Land.Height;
+
+
+            }
             //----
-            Globals.gameArea.Children.Add(Globals_Land.img_Land_1);
-            Globals.gameArea.Children.Add(Globals_Land.img_Land_2);
 
 
-            //----
 
-            double top_Ground_1 = Globals.gameArea.Height - Globals_Land.img_Land_1.Height;
-
-
-            double top_Ground_2 = Globals.gameArea.Height - Globals_Land.img_Land_2.Height;
+          
 
 
 

@@ -28,7 +28,7 @@ namespace Flying_Bird_C_._5_Pipes.Moving
         {
 
 
-            ///bug #0 i am here 
+            
 
 
             //----
