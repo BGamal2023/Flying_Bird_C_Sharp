@@ -15,7 +15,7 @@ using System.Windows.Controls;
 
 namespace Flying_Bird_C_._0_Main.Game_Controller
 {
-    internal class OnCreate_Controller : I_Game_Controller_Runnable
+    internal class OnStart_State : I_Game_Controller_Runnable
     {
         ///bug #0 ...remove locals field and add it to run of the interface....
         #region Fields
@@ -28,10 +28,12 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
             MainWindow_Handler obj_MWindow_Handler,
             GameArea_Handler obj_GameArea_Handler,
             Player_Creating obj_Player_Creating,
-            onRun_Controller obj_OnRun_Controller,
-            onRestart_Controller obj_onRestart_Controller,
-            onPause_Controller obj_OnPause_Contorller)
+             OnStart_State obj_OnStart_State,
+            onRun_State obj_OnRun_Controller,
+            onRestart_State obj_onRestart_Controller,
+            onPause_State obj_OnPause_Contorller)
         {
+            //----
             obj_MWindow_Handler.handle_The_MainWindow(mWindow);
             //----
             obj_GameArea_Handler.handle_The_GameArea(mWindow);
@@ -52,6 +54,7 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
              obj_MWindow_Handler,
              obj_GameArea_Handler,
             obj_Player_Creating,
+              obj_OnStart_State,
             obj_OnRun_Controller,
             obj_onRestart_Controller,
              obj_OnPause_Contorller);

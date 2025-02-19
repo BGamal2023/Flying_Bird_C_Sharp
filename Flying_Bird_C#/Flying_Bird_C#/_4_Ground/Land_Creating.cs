@@ -20,40 +20,60 @@ namespace Flying_Bird_C_._4_Ground
         //-------------------------------------------------------------------------------------------------------------
         public void set_Land_Dimension()
         {
-            //----
-            Globals_Land.img_Land_1.Width = Globals_Land.land_W_1;
-            Globals_Land.img_Land_1.Height = Globals_Land.land_H_1;
-            //----
-            Globals_Land.img_Land_2.Width = Globals_Land.land_W_2;
-            Globals_Land.img_Land_2.Height = Globals_Land.land_H_2;
-            //----
-
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                //----
+                Globals_Land.img_Land_1 = new Image();
+                Globals_Land.img_Land_2 = new Image();
+                //----
+                Globals_Land.img_Land_1.Width = Globals_Land.land_W_1;
+                Globals_Land.img_Land_1.Height = Globals_Land.land_H_1;
+                //----
+                Globals_Land.img_Land_2.Width = Globals_Land.land_W_2;
+                Globals_Land.img_Land_2.Height = Globals_Land.land_H_2;
+                //----
+            });
         }
         //-------------------------------------------------------------------------------------------------------------
         public void get_Image_From_Assets_For_The_Ground()
         {
-            //----
-            string str_Land_Image_Path = "pack://application:,,,/Assets/Photos/ground.png";
-            BitmapImage bitmap = new BitmapImage(new Uri(str_Land_Image_Path, UriKind.Absolute));
-            Globals_Land.img_Land_1.Source = bitmap;
-            Globals_Land.img_Land_2.Source = bitmap;
-            //----
-            Globals_Land.li_Of_Ground_Images.Add(Globals_Land.img_Land_1);
-            Globals_Land.li_Of_Ground_Images.Add(Globals_Land.img_Land_2);
-            //----
+
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                //----
+                string str_Land_Image_Path = "pack://application:,,,/Assets/Photos/ground.png";
+                BitmapImage bitmap = new BitmapImage(new Uri(str_Land_Image_Path, UriKind.Absolute));
+                Globals_Land.img_Land_1.Source = bitmap;
+                Globals_Land.img_Land_2.Source = bitmap;
+                //----
+                Globals_Land.li_Of_Ground_Images.Add(Globals_Land.img_Land_1);
+                Globals_Land.li_Of_Ground_Images.Add(Globals_Land.img_Land_2);
+                //----
+            });
+
+
+
         }
         //-------------------------------------------------------------------------------------------------------------
         public void add_The_Ground_To_The_GameArea()
         {
-            //----
-            Globals.gameArea.Children.Add(Globals_Land.img_Land_1);
-            Globals.gameArea.Children.Add(Globals_Land.img_Land_2);
-            //----
-            Canvas.SetLeft(Globals_Land.img_Land_1, Globals_Land.left_Ground_1);
-            Canvas.SetTop(Globals_Land.img_Land_1, Globals_Land.ground_Top);
-            Canvas.SetLeft(Globals_Land.img_Land_2, Globals_Land.left_Ground_2);
-            Canvas.SetTop(Globals_Land.img_Land_2, Globals_Land.ground_Top);
-            //----
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                //----
+                Globals.gameArea.Children.Add(Globals_Land.img_Land_1);
+                Globals.gameArea.Children.Add(Globals_Land.img_Land_2);
+                //----
+                Canvas.SetLeft(Globals_Land.img_Land_1, Globals_Land.left_Ground_1);
+                Canvas.SetTop(Globals_Land.img_Land_1, Globals_Land.ground_Top);
+                Canvas.SetLeft(Globals_Land.img_Land_2, Globals_Land.left_Ground_2);
+                Canvas.SetTop(Globals_Land.img_Land_2, Globals_Land.ground_Top);
+                //----
+            });
+
+
         }
     }
 }
+
+
+/// bug #0 i am here ..................try to not creation objects like Globals_Land ....Globals.player in the global instead .....declare it at golbal but create it at local 

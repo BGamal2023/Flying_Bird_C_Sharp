@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
+using System.Xml.Linq;
 
 namespace Flying_Bird_C_._5_Pipes.Creating
 {
@@ -24,11 +25,7 @@ namespace Flying_Bird_C_._5_Pipes.Creating
         //--------------------------------------------------------------------------------------------------------------------------
         private void create_List_Of_Pipes()
         {
-            //----
-            BitmapImage bitmap_Up_Pipe_Imgae = get_The_Down_Image();
-            //----
-            BitmapImage bitmap_Down_Pipe_Imgae = get_The_UP_Image();
-            //----
+           
             for (int i = 0; i < Globals_Pipes.num_Of_Pipes; i++)
             {
                 //----
@@ -38,6 +35,9 @@ namespace Flying_Bird_C_._5_Pipes.Creating
                     //----
                     Application.Current.Dispatcher.Invoke(() =>
                     {
+                        //----
+                        BitmapImage bitmap_Up_Pipe_Imgae = get_The_Down_Image();
+                       
                         //----
                         Image i_Image = new Image()
                         {
@@ -59,6 +59,9 @@ namespace Flying_Bird_C_._5_Pipes.Creating
                     //----
                     Application.Current.Dispatcher.Invoke(() =>
                     {
+                        //----
+                        BitmapImage bitmap_Down_Pipe_Imgae = get_The_UP_Image();
+                        //----
                         //----
                         Image i_Image = new Image()
                         {
@@ -92,6 +95,11 @@ namespace Flying_Bird_C_._5_Pipes.Creating
                     Application.Current.Dispatcher.Invoke(() =>
                     {
                         //----
+                        if (Globals_Pipes.li_Of_Pipes[i].Parent is Panel parentPanel)
+                        {
+                            parentPanel.Children.Remove(Globals_Pipes.li_Of_Pipes[i]); // Remove it from the old parent
+                        }
+                        //----
                         Globals.gameArea.Children.Add(Globals_Pipes.li_Of_Pipes[i]);
                         //----
                         Canvas.SetLeft(Globals_Pipes.li_Of_Pipes[i],
@@ -109,6 +117,11 @@ namespace Flying_Bird_C_._5_Pipes.Creating
                     //----
                     Application.Current.Dispatcher.Invoke(() =>
                     {
+                        //----
+                        if (Globals_Pipes.li_Of_Pipes[i].Parent is Panel parentPanel)
+                        {
+                            parentPanel.Children.Remove(Globals_Pipes.li_Of_Pipes[i]); // Remove it from the old parent
+                        }
                         //----
                         Globals.gameArea.Children.Add(Globals_Pipes.li_Of_Pipes[i]);
                         //----

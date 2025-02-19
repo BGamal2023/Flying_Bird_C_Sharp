@@ -28,4 +28,3 @@ namespace Flying_Bird_C_._4_Ground
 }
 
 
-/// bug # i am here should replace all land in project and use this class.........

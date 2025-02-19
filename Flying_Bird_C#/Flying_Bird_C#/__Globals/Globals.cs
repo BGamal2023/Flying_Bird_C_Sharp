@@ -13,7 +13,7 @@ namespace Flying_Bird_C_.__Globals
         public static int gameArea_H=mWindow_H;
         public static int gameArea_W=mWindow_W;
 
-        public static Canvas gameArea = new Canvas();
+        public static Canvas gameArea;
         ///Score
         public static int Score = 0;
         public static int Score_Lable_W = 30;
@@ -30,10 +30,10 @@ namespace Flying_Bird_C_.__Globals
         public static int zIndex_Score_TextBlock = 5;
 
         ///Player
-        public static Image img_Player=new Image();
+        public static Image img_Player;
         public static int player_W = 50;
         public static int player_H = 50;
-        public static int player_Moving_Step = 10;
+        public static int player_Moving_Step = 5;
 
         /// Game Controller
         public static I_Game_Controller_Runnable current_Game_State = new C_Game_Controller();

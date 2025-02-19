@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Flying_Bird_C_._0_Main.Game_Controller
 {
-    internal class onStart_Controller
+    internal class onPause_State
     {
     }
 }

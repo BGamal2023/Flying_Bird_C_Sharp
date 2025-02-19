@@ -20,9 +20,10 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
             MainWindow_Handler obj_MWindow_Handler,
             GameArea_Handler obj_GameArea_Handler,
             Player_Creating obj_Player_Creating,
-            onRun_Controller obj_OnRun_Controller,
-            onRestart_Controller obj_onRestart_Controller,
-            onPause_Controller obj_OnPause_Contorller)
+             OnStart_State obj_OnStart_State,
+            onRun_State obj_OnRun_Controller,
+            onRestart_State obj_onRestart_Controller,
+            onPause_State obj_OnPause_Contorller)
         {
          //   throw new NotImplementedException();
         }

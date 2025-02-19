@@ -42,7 +42,7 @@ namespace Flying_Bird_C_._2_GameArea_Handler
 
             Application.Current.Dispatcher.Invoke(() =>
             {
-
+                Globals.gameArea = new Canvas();
                 Globals.gameArea.Height = Globals.mWindow_H;
                 Globals.gameArea.Width = Globals.mWindow_W;
                 Globals.gameArea.Background = Brushes.Aqua;
