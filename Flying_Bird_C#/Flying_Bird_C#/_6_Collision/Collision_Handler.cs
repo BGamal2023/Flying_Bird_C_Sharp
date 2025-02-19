@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows;
 using Flying_Bird_C_.__Globals;
 using Flying_Bird_C_._A_10_General;
+using Flying_Bird_C_._8_Pop_Up_Menus;
 
 namespace Flying_Bird_C_._6_Collision
 {
@@ -28,7 +29,6 @@ namespace Flying_Bird_C_._6_Collision
                 Globals_Collision.does_Collision_Happend = true;
             }
             //----
-
         }
         //---------------------------------------------------------------------------------------------------------------
         private bool does_Ground_Collison_Happend()

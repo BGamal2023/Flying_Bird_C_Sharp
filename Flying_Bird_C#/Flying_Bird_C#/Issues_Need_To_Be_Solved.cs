@@ -11,5 +11,6 @@ namespace Flying_Bird_C_
 
 
         /// moving of pipes not smooth .....there is somthing heart the eyes.....
+        /// once i try to finish the application from collsion message it gives me error
     }
 }
