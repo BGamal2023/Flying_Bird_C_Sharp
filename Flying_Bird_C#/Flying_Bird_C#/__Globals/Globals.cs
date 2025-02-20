@@ -33,7 +33,7 @@ namespace Flying_Bird_C_.__Globals
         public static Image img_Player;
         public static int player_W = 50;
         public static int player_H = 50;
-        public static int player_Moving_Step = 5;
+        public static int player_Moving_Step = 10;
 
         /// Game Controller
         public static I_Game_Controller_Runnable current_Game_State = new C_Game_Controller();

@@ -30,9 +30,11 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
             Globals.gameArea.Children.Clear();
             Globals.Score = 0;
             Globals_Pipes.li_Of_Pipes.Clear();
-            Globals.current_Game_State = obj_OnStart_State;
             Globals_Player.should_I_Move_Player_Up = false;
             Globals_Player.should_I_Move_Player_Down = true;
+          //  remove_All_Pipes();
+
+            Globals.current_Game_State = obj_OnStart_State;
             Globals.current_Game_State.Run(
                     mWindow,
                  obj_MWindow_Handler,
@@ -47,13 +49,6 @@ namespace Flying_Bird_C_._0_Main.Game_Controller
             //restart the level by:-....make the Runnable equal to onCreate_Controller...
 
             //----
-        }
-        #region The Fields
-        #endregion
-        //------------------------------------------------------------------------------------------------------------
-        private void onRestart_Current_Level()
-        {
-
         }
     }
 }

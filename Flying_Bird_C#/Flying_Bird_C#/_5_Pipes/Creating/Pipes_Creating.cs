@@ -97,7 +97,7 @@ namespace Flying_Bird_C_._5_Pipes.Creating
                         //----
                         if (Globals_Pipes.li_Of_Pipes[i].Parent is Panel parentPanel)
                         {
-                            parentPanel.Children.Remove(Globals_Pipes.li_Of_Pipes[i]); // Remove it from the old parent
+                            parentPanel.Children.Remove(Globals_Pipes.li_Of_Pipes[i]);
                         }
                         //----
                         Globals.gameArea.Children.Add(Globals_Pipes.li_Of_Pipes[i]);
